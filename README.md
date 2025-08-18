@@ -1,6 +1,7 @@
 # NEW AGROMAPS WEBSITE REPOSITORY
 
-<img width="3404" height="1260" alt="Cover" src="https://github.com/user-attachments/assets/5acb9859-fe6e-4189-9c7a-6a704e0ad25b" />
+
+<img width="3404" height="1260" alt="Cover" src="https://github.com/user-attachments/assets/ed8169a2-e1fd-4329-aef4-21b6a1b600dd" />
 
 
 <div align="Center">
