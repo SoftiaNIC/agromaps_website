@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Footer from "../components/footer";
 
 
 export default function Web2() {
@@ -11,6 +12,7 @@ export default function Web2() {
                 <h2 className="text-3xl font-bold mb-4">Sección especial de Web 2</h2>
                 <p>Aquí agregas contenido diferente al de Web1.</p>
             </section>
+            <Footer />
         </>
     );
 }

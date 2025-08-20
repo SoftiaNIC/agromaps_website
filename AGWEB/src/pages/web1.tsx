@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Footer from "../components/footer";
 
 
 export default function Web1() {
@@ -9,6 +10,7 @@ export default function Web1() {
             <Navbar />
             <Hero />
             <About />
+            <Footer />
         </>
     );
 }
