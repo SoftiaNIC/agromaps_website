@@ -52,7 +52,7 @@ export default function Hero() {
                     {leftImages.map((img, i) => (
                         <div
                             key={i}
-                            className="relative w-20 h-60 rounded-full overflow-hidden group cursor-pointer shadow-lg"
+                            className="relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg"
                         >
                             <img
                                 src={img.defaultSrc}
@@ -87,7 +87,7 @@ export default function Hero() {
                     {rightImages.map((img, i) => (
                         <div
                             key={i}
-                            className="relative w-20 h-60 rounded-full overflow-hidden group cursor-pointer shadow-lg"
+                            className="relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg"
                         >
                             <img
                                 src={img.defaultSrc}
