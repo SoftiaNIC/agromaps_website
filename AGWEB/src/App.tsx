@@ -1,23 +1,18 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Web1 from "./pages/web1";
+import Web2 from "./pages/web2";
 
-function App() {
+export default function App() {
   return (
-    <div className="p-6">
-      {/* Menú de navegación */}
-      <nav className="flex gap-4 mb-6">
-        <Link to="/" className="text-blue-500 hover:underline">Home</Link>
-        <Link to="/about" className="text-blue-500 hover:underline">About</Link>
-        <Link to="/contact" className="text-blue-500 hover:underline">Contact</Link>
-      </nav>
+    <Routes>
+      {/* Redirigir raíz a Web1 */}
+      <Route index element={<Navigate to="/web1" replace />} />
+      <Route path="/web1" element={<Web1 />} />
+      <Route path="/web2" element={<Web2 />} />
 
-      {/* Rutas */}
-      <Routes>
-        <Route path="/" element={<h1 className="text-2xl">Página Home</h1>} />
-        <Route path="/about" element={<h1 className="text-2xl">Página About</h1>} />
-        <Route path="/contact" element={<h1 className="text-2xl">Página Contact</h1>} />
-      </Routes>
-    </div>
+      {/* Página 404 */}
+      <Route path="*" element={<h1 className="p-6">Página no encontrada</h1>} />
+    </Routes>
   );
 }
 
-export default App;
