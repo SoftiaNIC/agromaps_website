@@ -108,15 +108,15 @@ export default function Hero() {
             <div className="w-full overflow-hidden relative h-20 mt-10">
                 <motion.div
                     className="flex gap-12 absolute left-0"
-                    animate={{ x: ["60%", "-50%"] }}
-                    transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
+                    animate={{ x: ["50%", "-50%"] }}
+                    transition={{ repeat: Infinity, duration: 100, ease: "linear" }}
                 >
                     {brands.concat(brands).map((logo, i) => (
                         <img
                             key={i}
                             src={logo}
                             alt={`brand-${i}`}
-                            className="h-35 object-contain"
+                            className="h-25 object-contain"
                         />
                     ))}
                 </motion.div>
