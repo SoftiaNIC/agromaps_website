@@ -1,31 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion"; // 👈 Animación
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-    
-    const linkColor = "#1C5937"; // verde de texto normal
-    const linkHover = "#0140BA"; // verde al hover
-    const buttonColor = "#1C5937"; // botón base
-    const buttonHover = "#145BE5"; // botón hover
+    const linkColor = "#1C5937";
+    const linkHover = "#0140BA";
+    const buttonColor = "#1C5937";
+    const buttonHover = "#145BE5";
+
+    // Detectar scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+        <motion.nav
+            initial={{ y: -80, opacity: 0 }} // 👈 animación de entrada
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"
+                }`}
+        >
             <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-                {/* PC- Logo izquierda */}
+                {/* PC - Logo izquierda */}
                 <div className="hidden md:flex items-center gap-2">
-                    <img
-                        src="/public/icons/Logo_nv.svg" 
-                        alt="Agromaps Logo"
-                        className="h-10 w-auto"
-                    />
+                    <Link to="/" className="flex items-center gap-2">
+                        <img
+                            src="/public/icons/Logo_nv.svg"
+                            alt="Agromaps Logo"
+                            className="h-10 w-auto"
+                        />
+                    </Link>
                 </div>
 
                 {/* PC - Navs en el centro */}
                 <div className="hidden md:flex items-center gap-8">
-                    {["Inicio", "Nosotros", "Team", "Agromaps", /* "Aprender" */].map((item, idx) => (
+                    {["Inicio", "Nosotros", "Team", "Agromaps"].map((item, idx) => (
                         <Link
                             key={idx}
                             to={`/${item.toLowerCase()}`}
@@ -68,17 +91,24 @@ export default function Navbar() {
                     >
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
-                    <img
-                        src="/public/icons/LogoSV.svg"
-                        alt="Agromaps Logo"
-                        className="h-10 w-auto"
-                    />
+                    <Link to="/" className="flex items-center">
+                        <img
+                            src="/public/icons/LogoSV.svg"
+                            alt="Agromaps Logo"
+                            className="h-10 w-auto"
+                        />
+                    </Link>
                 </div>
             </div>
 
             {/* Mobile - Menu desplegable */}
             {isOpen && (
-                <div className="md:hidden flex flex-col items-center gap-8 py-6 bg-white shadow-md">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }} // 👈 animación de apertura
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="md:hidden flex flex-col items-center gap-8 py-6 bg-white shadow-md"
+                >
                     {["Inicio", "Nosotros", "Team", "Agromaps"].map((item, idx) => (
                         <Link
                             key={idx}
@@ -111,9 +141,8 @@ export default function Navbar() {
                     >
                         Contáctanos
                     </Link>
-                </div>
+                </motion.div>
             )}
-        </nav>
+        </motion.nav>
     );
 }
-
