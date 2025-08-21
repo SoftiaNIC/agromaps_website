@@ -119,7 +119,7 @@ export default function Hero() {
             className="relative w-full h-[100vh] flex flex-col justify-between items-center bg-white overflow-hidden"
         >
             {/* Contenedor central con layout horizontal y posicionamiento individual */}
-            <div className="flex flex-row items-center justify-center gap-16 mt-16 relative">
+            <div className="flex flex-row items-center justify-center gap-10 mt-16 relative">
                 {/* Primera imagen izquierda - Posicionada más arriba */}
                 <ImageBar
                     defaultSrc={leftImages[0].defaultSrc}
