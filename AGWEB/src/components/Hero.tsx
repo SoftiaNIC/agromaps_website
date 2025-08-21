@@ -119,7 +119,7 @@ export default function Hero() {
                             <img
                                 src={logo}
                                 alt={`AGROMAPS Logo ${i}`}
-                                className="h-35 w-auto object-contain"
+                                className="h-20 w-auto object-contain"
                             />
                         </div>
                     ))}
