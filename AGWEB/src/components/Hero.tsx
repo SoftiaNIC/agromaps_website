@@ -162,19 +162,19 @@ export default function Hero() {
                 />
             </div>
 
-            {/* Carousel de marcas - Iconos más grandes y visibles */}
-            <div className="w-full overflow-hidden relative h-30 mt-1 mb-1">
+            {/* Carousel de marcas - Responsive */}
+            <div className="w-full overflow-hidden relative mt-0 mb-2 h-20 sm:h-24 md:h-28 lg:h-32">
                 <motion.div
-                    className="flex gap-10 w-[200%]"
+                    className="flex items-center w-[180%] sm:w-[200%] md:w-[220%] lg:w-[240%] gap-6 sm:gap-8 md:gap-12 lg:gap-16"
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
                 >
                     {brands.concat(brands).map((logo, i) => (
-                        <div key={i} className="flex items-center gap-4">
+                        <div key={i} className="flex items-center">
                             <img
                                 src={logo}
                                 alt={`AGROMAPS Logo ${i}`}
-                                className="h-20 w-auto object-contain"
+                                className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
                             />
                         </div>
                     ))}

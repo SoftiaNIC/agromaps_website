@@ -12,6 +12,17 @@ export default function Navbar() {
     const buttonColor = "#1C5937";
     const buttonHover = "#145BE5";
 
+    // Función para scroll suave a secciones
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     // Detectar scroll
     useEffect(() => {
         const handleScroll = () => {
@@ -48,11 +59,16 @@ export default function Navbar() {
 
                 {/* PC - Navs en el centro */}
                 <div className="hidden md:flex items-center gap-8">
-                    {["Inicio", "Nosotros", "Team", "Agromaps"].map((item, idx) => (
-                        <Link
+                    {[
+                        { name: "Inicio", id: "hero" },
+                        { name: "Nosotros", id: "aboutt" },
+                        { name: "Team", id: "team" },
+                        { name: "Agromaps", id: "agromaps" }
+                    ].map((item, idx) => (
+                        <button
                             key={idx}
-                            to={`/${item.toLowerCase()}`}
-                            className="font-semibold transition-colors"
+                            onClick={() => scrollToSection(item.id)}
+                            className="font-semibold transition-colors cursor-pointer"
                             style={{ color: linkColor }}
                             onMouseEnter={(e) =>
                                 ((e.target as HTMLElement).style.color = linkHover)
@@ -61,8 +77,8 @@ export default function Navbar() {
                                 ((e.target as HTMLElement).style.color = linkColor)
                             }
                         >
-                            {item}
-                        </Link>
+                            {item.name}
+                        </button>
                     ))}
                 </div>
 
@@ -109,11 +125,19 @@ export default function Navbar() {
                     transition={{ duration: 0.4 }}
                     className="md:hidden flex flex-col items-center gap-8 py-6 bg-white shadow-md"
                 >
-                    {["Inicio", "Nosotros", "Team", "Agromaps"].map((item, idx) => (
-                        <Link
+                    {[
+                        { name: "Inicio", id: "hero" },
+                        { name: "Nosotros", id: "aboutt" },
+                        { name: "Team", id: "team" },
+                        { name: "Agromaps", id: "agromaps" }
+                    ].map((item, idx) => (
+                        <button
                             key={idx}
-                            to={`/${item.toLowerCase()}`}
-                            className="font-semibold text-lg transition-colors"
+                            onClick={() => {
+                                scrollToSection(item.id);
+                                setIsOpen(false);
+                            }}
+                            className="font-semibold text-lg transition-colors cursor-pointer"
                             style={{ color: linkColor }}
                             onMouseEnter={(e) =>
                                 ((e.target as HTMLElement).style.color = linkHover)
@@ -121,10 +145,9 @@ export default function Navbar() {
                             onMouseLeave={(e) =>
                                 ((e.target as HTMLElement).style.color = linkColor)
                             }
-                            onClick={() => setIsOpen(false)}
                         >
-                            {item}
-                        </Link>
+                            {item.name}
+                        </button>
                     ))}
 
                     <Link
