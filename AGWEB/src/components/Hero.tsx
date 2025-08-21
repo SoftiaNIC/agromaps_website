@@ -52,7 +52,7 @@ export default function Hero() {
                         <div
                             key={i}
                             className={`relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg ${
-                                i === 0 ? 'mt-8' : 'mt-0' // Primera imagen más alta
+                                i === 0 ? 'mt-8' : 'mt-16' // Primera imagen más alta
                             }`}
                         >
                             <img
@@ -89,7 +89,7 @@ export default function Hero() {
                         <div
                             key={i}
                             className={`relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg ${
-                                i === 1 ? 'mt-8' : 'mt-0' // Cuarta imagen más alta (segunda de la derecha)
+                                i === 1 ? 'mt-8' : 'mt-16' // Cuarta imagen más alta (segunda de la derecha)
                             }`}
                         >
                             <img
@@ -108,9 +108,9 @@ export default function Hero() {
             </div>
 
             {/* Carousel de marcas - Iconos más grandes y visibles */}
-            <div className="w-full overflow-hidden relative h-32 mt-16 mb-8">
+            <div className="w-full overflow-hidden relative h-25 mt-16 mb-8">
                 <motion.div
-                    className="flex gap-20 w-[200%]"
+                    className="flex gap-20 w-[170%]"
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
                 >
