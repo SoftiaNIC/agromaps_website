@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
     const brands = [
-        "/public/images/logo-agromaps-001.png",
-        "/public/images/logo-agromaps-001.png",
-        "/public/images/logo-agromaps-001.png",
-        "/public/images/logo-agromaps-001.png",
-        "/public/images/logo-agromaps-001.png",
+        "/public/icons/CarouselLOG.svg",
+        "/public/icons/CarouselLOG.svg",
+        "/public/icons/CarouselLOG.svg",
+        "/public/icons/CarouselLOG.svg",
+        "/public/icons/CarouselLOG.svg",
     ];
 
     // Configuración de imágenes (default + hover)
@@ -45,13 +45,15 @@ export default function Hero() {
             className="relative w-full h-[90vh] flex flex-col justify-between items-center bg-white overflow-hidden"
         >
             {/* Contenedor central */}
-            <div className="flex flex-row items-center justify-center gap-8 mt-16">
-                {/* Barras Izquierda - 2 columnas */}
-                <div className="flex flex-row gap-6">
+            <div className="flex flex-row items-center justify-center gap-12 mt-16">
+                {/* Barras Izquierda - 2 columnas con posicionamiento en "V" */}
+                <div className="flex flex-row gap-6 items-end">
                     {leftImages.map((img, i) => (
                         <div
                             key={i}
-                            className="relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg"
+                            className={`relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg ${
+                                i === 0 ? 'mt-8' : 'mt-0' // Primera imagen más alta
+                            }`}
                         >
                             <img
                                 src={img.defaultSrc}
@@ -67,8 +69,8 @@ export default function Hero() {
                     ))}
                 </div>
 
-                {/* Imagen Central */}
-                <div className="relative w-80 h-60 rounded-2xl overflow-hidden shadow-xl group cursor-pointer mx-8">
+                {/* Imagen Central - Posicionada más abajo para crear la "V" */}
+                <div className="relative w-80 h-60 rounded-2xl overflow-hidden shadow-xl group cursor-pointer mx-8 mt-16">
                     <img
                         src={centerImage.defaultSrc}
                         alt="Center"
@@ -77,16 +79,18 @@ export default function Hero() {
                     <img
                         src={centerImage.hoverSrc}
                         alt="Center-hover"
-                        className="w-full h-full object-cover hidden group-hover:block transition duration-600"
+                        className="w-full h-full object-cover hidden group-hover:block transition duration-1000"
                     />
                 </div>
 
-                {/* Barras Derecha - 2 columnas */}
-                <div className="flex flex-row gap-6">
+                {/* Barras Derecha - 2 columnas con posicionamiento en "V" */}
+                <div className="flex flex-row gap-6 items-end">
                     {rightImages.map((img, i) => (
                         <div
                             key={i}
-                            className="relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg"
+                            className={`relative w-20 h-80 rounded-full overflow-hidden group cursor-pointer shadow-lg ${
+                                i === 1 ? 'mt-8' : 'mt-0' // Cuarta imagen más alta (segunda de la derecha)
+                            }`}
                         >
                             <img
                                 src={img.defaultSrc}
@@ -103,20 +107,21 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Carousel de marcas */}
-            <div className="w-full overflow-hidden relative h-20 mt-10">
+            {/* Carousel de marcas - Iconos más grandes y visibles */}
+            <div className="w-full overflow-hidden relative h-32 mt-16 mb-8">
                 <motion.div
-                    className="flex gap-16 w-[200%]" // <- ancho extendido
-                    animate={{ x: ["0%", "-50%"] }} // <- se mueve la mitad
+                    className="flex gap-20 w-[200%]"
+                    animate={{ x: ["0%", "-50%"] }}
                     transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
                 >
                     {brands.concat(brands).map((logo, i) => (
-                        <img
-                            key={i}
-                            src={logo}
-                            alt={`brand-${i}`}
-                            className="h-20 object-contain"
-                        />
+                        <div key={i} className="flex items-center gap-4">
+                            <img
+                                src={logo}
+                                alt={`AGROMAPS Logo ${i}`}
+                                className="h-35 w-auto object-contain"
+                            />
+                        </div>
                     ))}
                 </motion.div>
             </div>
