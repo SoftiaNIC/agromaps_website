@@ -29,22 +29,50 @@ interface CenterImageProps {
     hoverSrc: string;
     alt: string;
     className?: string;
+    size?: 'small' | 'medium' | 'large' | 'custom';
+    customWidth?: string;
+    customHeight?: string;
 }
 
-const CenterImage = ({ defaultSrc, hoverSrc, alt, className = "" }: CenterImageProps) => (
-    <div className={`relative w-100 h-60 rounded-2xl overflow-hidden shadow-xl group cursor-pointer ${className}`}>
-        <img
-            src={defaultSrc}
-            alt={alt}
-            className="w-full h-full object-cover group-hover:hidden transition duration-600"
-        />
-        <img
-            src={hoverSrc}
-            alt={`${alt}-hover`}
-            className="w-full h-full object-cover hidden group-hover:block transition duration-1000"
-        />
-    </div>
-);
+const CenterImage = ({ 
+    defaultSrc, 
+    hoverSrc, 
+    alt, 
+    className = "", 
+    size = 'medium',
+    customWidth,
+    customHeight 
+}: CenterImageProps) => {
+    const getSizeClasses = () => {
+        switch (size) {
+            case 'small':
+                return 'w-80 h-48'; // 320x192
+            case 'medium':
+                return 'w-100 h-60'; // 400x240 (tamaño actual)
+            case 'large':
+                return 'w-120 h-72'; // 480x288 (más grande)
+            case 'custom':
+                return `${customWidth || 'w-100'} ${customHeight || 'h-60'}`;
+            default:
+                return 'w-100 h-60';
+        }
+    };
+
+    return (
+        <div className={`relative ${getSizeClasses()} rounded-2xl overflow-hidden shadow-xl group cursor-pointer ${className}`}>
+            <img
+                src={defaultSrc}
+                alt={alt}
+                className="w-full h-full object-cover group-hover:hidden transition duration-600"
+            />
+            <img
+                src={hoverSrc}
+                alt={`${alt}-hover`}
+                className="w-full h-full object-cover hidden group-hover:block transition duration-1000"
+            />
+        </div>
+    );
+};
 
 export default function Hero() {
     const brands = [
@@ -88,7 +116,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative w-full h-[90vh] flex flex-col justify-between items-center bg-white overflow-hidden"
+            className="relative w-full h-[100vh] flex flex-col justify-between items-center bg-white overflow-hidden"
         >
             {/* Contenedor central con layout horizontal y posicionamiento individual */}
             <div className="flex flex-row items-center justify-center gap-16 mt-16 relative">
@@ -114,6 +142,7 @@ export default function Hero() {
                     hoverSrc={centerImage.hoverSrc}
                     alt="Center"
                     className="mx-6 mt-35"
+                    size="medium"
                 />
 
                 {/* Primera imagen derecha - Posicionada más abajo */}
@@ -134,9 +163,9 @@ export default function Hero() {
             </div>
 
             {/* Carousel de marcas - Iconos más grandes y visibles */}
-            <div className="w-full overflow-hidden relative h-24 mt-16 mb-8">
+            <div className="w-full overflow-hidden relative h-30 mt-1 mb-1">
                 <motion.div
-                    className="flex gap-20 w-[170%]"
+                    className="flex gap-10 w-[200%]"
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
                 >
