@@ -7,7 +7,6 @@ export default function Hero() {
         "/public/images/logo-agromaps-001.png",
         "/public/images/logo-agromaps-001.png",
         "/public/images/logo-agromaps-001.png",
-        
     ];
 
     // Configuración de imágenes (default + hover)
@@ -46,9 +45,9 @@ export default function Hero() {
             className="relative w-full h-[90vh] flex flex-col justify-between items-center bg-white overflow-hidden"
         >
             {/* Contenedor central */}
-            <div className="flex flex-row items-center justify-center gap-8 mt-8">
-                {/* Barras Izquierda */}
-                <div className="flex flex-col gap-6">
+            <div className="flex flex-row items-center justify-center gap-8 mt-16">
+                {/* Barras Izquierda - 2 columnas */}
+                <div className="flex flex-row gap-6">
                     {leftImages.map((img, i) => (
                         <div
                             key={i}
@@ -69,7 +68,7 @@ export default function Hero() {
                 </div>
 
                 {/* Imagen Central */}
-                <div className="relative w-80 h-60 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
+                <div className="relative w-80 h-60 rounded-2xl overflow-hidden shadow-xl group cursor-pointer mx-8">
                     <img
                         src={centerImage.defaultSrc}
                         alt="Center"
@@ -82,8 +81,8 @@ export default function Hero() {
                     />
                 </div>
 
-                {/* Barras Derecha */}
-                <div className="flex flex-col gap-6">
+                {/* Barras Derecha - 2 columnas */}
+                <div className="flex flex-row gap-6">
                     {rightImages.map((img, i) => (
                         <div
                             key={i}
@@ -107,16 +106,16 @@ export default function Hero() {
             {/* Carousel de marcas */}
             <div className="w-full overflow-hidden relative h-20 mt-10">
                 <motion.div
-                    className="flex gap-12 absolute left-0"
-                    animate={{ x: ["50%", "-50%"] }}
-                    transition={{ repeat: Infinity, duration: 100, ease: "linear" }}
+                    className="flex gap-16 w-[200%]" // <- ancho extendido
+                    animate={{ x: ["0%", "-50%"] }} // <- se mueve la mitad
+                    transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
                 >
                     {brands.concat(brands).map((logo, i) => (
                         <img
                             key={i}
                             src={logo}
                             alt={`brand-${i}`}
-                            className="h-25 object-contain"
+                            className="h-20 object-contain"
                         />
                     ))}
                 </motion.div>
