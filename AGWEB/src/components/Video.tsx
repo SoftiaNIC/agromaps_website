@@ -88,7 +88,7 @@ export default function CultivoSection() {
                         <img src="/icons/fire.svg" alt="Empezar" className="w-5 h-5" />
                         <span>Empezar YA!</span>
                     </button>
-                    <button className="px-6 py-3 bg-gray-600 hover:bg-green-500 border border-white/30 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2">
+                    <button className="px-6 py-3 bg-gray-600 hover:bg-blue-600 border border-white/30 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2">
                         <img src="/icons/present.svg" alt="Probar" className="w-5 h-5" />
                         <span>Probar App</span>
                     </button>
