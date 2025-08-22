@@ -11,7 +11,7 @@ export default function WhatWeDo() {
             }}
         >
             {/* Overlay para dar contraste */}
-            <div className="absolute inset-0 bg-white/70"></div>
+            <div className="absolute inset-0 bg-Black/70"></div>
 
             {/* Contenido */}
             <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col items-center text-center">
