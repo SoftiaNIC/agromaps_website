@@ -63,7 +63,7 @@ export default function Navbar() {
                         { name: "Inicio", id: "hero" },
                         { name: "Nosotros", id: "aboutt" },
                         { name: "Team", id: "team" },
-                        { name: "Agromaps", id: "agromaps" }
+                        { name: "Agromaps", id: "agromapss" },
                     ].map((item, idx) => (
                         <button
                             key={idx}

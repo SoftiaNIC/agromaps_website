@@ -4,7 +4,8 @@ import mockupImage from "../assets/images/Hacer/Mckoup1.png";
 export default function WhatWeDo() {
     return (
         <section
-            className="relative w-full py-30 bg-center bg-no-repeat bg-cover"
+            id="agromapss"
+            className="relative w-full py-20 bg-center bg-no-repeat bg-cover"
             style={{
                 backgroundImage: "url('/images/BG_Hacemos.png')", // tu ruta del bg logo
             }}
@@ -29,7 +30,7 @@ export default function WhatWeDo() {
                 {/* Botón */}
                 <a
                     href="#"
-                    className="px-6 py-3 bg-[#1C5937] text-white font-semibold rounded-lg shadow-md transition-transform duration-300 hover:bg-[#449C7C] hover:scale-105"
+                    className="px-6 py-3 bg-[#1C5937] text-white font-semibold rounded-lg shadow-md transition-transform duration-300 hover:bg-[#145BE5] hover:scale-105"
                 >
                     Ver Web de Aplicación
                 </a>
