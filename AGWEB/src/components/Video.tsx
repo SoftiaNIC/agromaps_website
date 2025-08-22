@@ -1,14 +1,5 @@
 import { motion } from "framer-motion";
 
-// Componente de estrellitas
-const StarIcon = () => (
-    <div className="flex items-center space-x-1">
-        <div className="w-3 h-3 bg-green-400 rounded-sm transform rotate-45"></div>
-        <div className="w-2 h-2 bg-green-300 rounded-sm transform rotate-45"></div>
-        <div className="w-2.5 h-2.5 bg-green-400 rounded-sm transform rotate-45"></div>
-    </div>
-);
-
 export default function CultivoSection() {
     return (
         <section
@@ -41,7 +32,7 @@ export default function CultivoSection() {
                     transition={{ duration: 0.6 }}
                     className="px-4 py-2  bg-white/10 backdrop-blur border border-green-800 rounded-full text-sm hover:bg-blue-600 transition-all duration-300 flex items-center space-x-2"
                 >
-                    <StarIcon />
+                    <img src="/icons/stars.svg" alt="Estrellas" className="w-5 h-5" />
                     <span>Soluciones Personalizadas con IA</span>
                 </motion.div>
 
@@ -72,14 +63,17 @@ export default function CultivoSection() {
                     transition={{ duration: 0.7, delay: 0.6 }}
                     className="flex flex-wrap justify-center gap-3 mt-4"
                 >
-                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm hover:bg-[#01312D] transition-all duration-300 cursor-pointer">
-                        ⚡ Rápida App
+                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm hover:bg-[#01312D] transition-all duration-300 cursor-pointer flex items-center space-x-2">
+                        <img src="/icons/lightning.svg" alt="Rápida" className="w-4 h-4" />
+                        <span>Rápida App</span>
                     </span>
-                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm hover:bg-[#01312D] transition-all duration-300 cursor-pointer">
-                        🔒 Seguridad
+                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm hover:bg-[#01312D] transition-all duration-300 cursor-pointer flex items-center space-x-2">
+                        <img src="/icons/lock.svg" alt="Seguridad" className="w-4 h-4" />
+                        <span>Seguridad</span>
                     </span>
-                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm hover:bg-[#01312D] transition-all duration-300 cursor-pointer">
-                        🔄 Actualizaciones y Mejoras
+                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm hover:bg-[#01312D] transition-all duration-300 cursor-pointer flex items-center space-x-2">
+                        <img src="/icons/update.svg" alt="Actualizaciones" className="w-4 h-4" />
+                        <span>Actualizaciones y Mejoras</span>
                     </span>
                 </motion.div>
 
@@ -91,11 +85,11 @@ export default function CultivoSection() {
                     className="flex flex-wrap justify-center gap-4 mt-6"
                 >
                     <button className="px-6 py-3 bg-gray-600 hover:bg-blue-600 rounded-full font-semibold shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2">
-                        <span className="text-white">🔥</span>
+                        <img src="/icons/fire.svg" alt="Empezar" className="w-5 h-5" />
                         <span>Empezar YA!</span>
                     </button>
-                    <button className="px-6 py-3 bg-gray-600 hover:bg-blue-600 border border-white/30 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2">
-                        <span className="text-white">🎁</span>
+                    <button className="px-6 py-3 bg-gray-600 hover:bg-green-500 border border-white/30 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2">
+                        <img src="/icons/present.svg" alt="Probar" className="w-5 h-5" />
                         <span>Probar App</span>
                     </button>
                 </motion.div>
