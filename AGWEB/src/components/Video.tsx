@@ -39,7 +39,7 @@ export default function CultivoSection() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="px-4 py-2 bg-blue-900 border border-green-400 rounded-full text-sm hover:bg-blue-800 transition-all duration-300 flex items-center space-x-2"
+                    className="px-4 py-2  bg-white/10 backdrop-blur border border-green-800 rounded-full text-sm hover:bg-blue-600 transition-all duration-300 flex items-center space-x-2"
                 >
                     <StarIcon />
                     <span>Soluciones Personalizadas con IA</span>
