@@ -32,9 +32,9 @@ export default function Footer({ siteName = "Agromaps", logo }: FooterProps) {
 
                     <div className="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
                         <div>
-                            <h3 className="font-semibold text-white uppercase mb-4">Producto</h3>
+                            <h3 className="font-semibold text-white uppercase mb-4">Descargar App</h3>
                             <ul>
-                                <li className="mb-2"><a href="/features" className="hover:text-white">Características</a></li>
+                                <li className="mb-2"><a href="/careers" className="hover:text-white">Plataformas</a></li>
                                 <div className="flex space-x-3">
                                     <img
                                         src="/src/assets/images/Footer/logo_playstore.png" 
@@ -50,11 +50,10 @@ export default function Footer({ siteName = "Agromaps", logo }: FooterProps) {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-white uppercase mb-4">Compañía</h3>
-                            <ul>
-                                <li className="mb-2"><a href="/about" className="hover:text-white">Sobre Nosotros</a></li>
-                                <li className="mb-2"><a href="/careers" className="hover:text-white">Carreras</a></li>
-                                <li className="mb-2"><a href="/contact" className="hover:text-white">Contacto</a></li>
+                            <h3 className="font-semibold text-white uppercase mb-4">Contacto</h3>
+                            <ul>    
+                                <li className="mb-2"><a href="/features" className="hover:text-white">Agromaps@gmail.com </a></li>
+                                <li className="mb-2"><a href="/features" className="hover:text-white">Managua - Nicaragua</a></li>
                             </ul>
                         </div>
                         <div>
@@ -68,7 +67,7 @@ export default function Footer({ siteName = "Agromaps", logo }: FooterProps) {
                 </div>
 
                 {/* Barra inferior */}
-                
+
                 <div className="mt-12 pt-8 border-t border-white-700 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-sm text-center md:text-left mb-4 md:mb-0">
                         © {new Date().getFullYear()} {siteName}. Todos los derechos reservados.
