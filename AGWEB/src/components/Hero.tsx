@@ -118,6 +118,14 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="relative w-full h-[100vh] flex flex-col justify-between items-center bg-white overflow-hidden"
         >
+            {/* Background con imagen personalizada solo en móvil */}
+            <div 
+                className="absolute inset-0 md:hidden bg-center bg-no-repeat bg-cover"
+                style={{
+                    backgroundImage: "url('/images/BG_heromob.svg')"
+                }}
+            ></div>
+
             {/* Contenedor central con layout horizontal y posicionamiento individual */}
             <div className="flex flex-row items-center justify-center gap-10 mt-16 relative">
                 {/* Primera imagen izquierda - Posicionada más arriba */}

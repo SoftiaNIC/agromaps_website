@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mockupImage from "../assets/images/Hacer/Mckoup1.png";
+import mockupImage from "..//assets/Mckoup.svg";
 
 export default function WhatWeDo() {
     return (
@@ -7,11 +7,14 @@ export default function WhatWeDo() {
             id="agromapss"
             className="relative w-full py-20 bg-center bg-no-repeat bg-cover"
             style={{
-                backgroundImage: "url('/images/BG_Hacemos.png')", // tu ruta del bg logo
+                backgroundImage: "url('/images/BG_Hacemos.png')", 
             }}
         >
             {/* Overlay para dar contraste */}
             <div className="absolute inset-0 bg-Black/70"></div>
+
+            {/* Fondo blanco solo en móvil */}
+            <div className="absolute inset-0 bg-white md:hidden"></div>
 
             {/* Contenido */}
             <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col items-center text-center">
