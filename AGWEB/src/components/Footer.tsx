@@ -73,9 +73,9 @@ export default function Footer({ siteName = "Agromaps", logo }: FooterProps) {
                         © {new Date().getFullYear()} {siteName}. Todos los derechos reservados.
                     </p>
                     <div className="flex space-x-4">
-                        <a href="#" className="hover:text-white" aria-label="Twitter"><Twitter size={20} /></a>
-                        <a href="#" className="hover:text-white" aria-label="Facebook"><Facebook size={20} /></a>
-                        <a href="#" className="hover:text-white" aria-label="Instagram"><Instagram size={20} /></a>
+                        <a target="noopener" href="https://x.com/sandinoG1X" className="hover:text-white" aria-label="Twitter"><Twitter size={20} /></a>
+                        <a target="noopener" href="https://www.facebook.com/g2.giox1" className="hover:text-white" aria-label="Facebook"><Facebook size={20} /></a>
+                        <a target="noopener" href="https://www.instagram.com/sandi.giox/" className="hover:text-white" aria-label="Instagram"><Instagram size={20} /></a>
                     </div>
                 </div>
             </div>
