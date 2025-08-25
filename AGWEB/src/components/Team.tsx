@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const team = [
+const team =  [
     {
         name: "Geovanny Sandino",
         role: "Ingeniero de Sistemas",
@@ -59,7 +59,7 @@ const team = [
 
 export default function Equipo() {
     return (
-        <section className="relative min-h-screen py-16 overflow-hidden">
+        <section id="equipo" className="relative min-h-screen py-16 overflow-hidden">
             {/* Background Image */}
             <div 
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"

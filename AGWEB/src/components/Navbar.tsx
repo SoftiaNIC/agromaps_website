@@ -60,10 +60,10 @@ export default function Navbar() {
                 {/* PC - Navs en el centro */}
                 <div className="hidden md:flex items-center gap-8">
                     {[
-                        { name: "Inicio", id: "hero" },
                         { name: "Nosotros", id: "aboutt" },
-                        { name: "Team", id: "team" },
                         { name: "Agromaps", id: "agromapss" },
+                        { name: "IA", id: "cultivo" },
+                        { name: "Equipo", id: "equipo" },
                     ].map((item, idx) => (
                         <button
                             key={idx}
