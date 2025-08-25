@@ -8,7 +8,7 @@ const team = [
         linkedin: "https://www.linkedin.com/in/geovanny-daniel-sandino-137691273/",
         github: "https://github.com/GioX-16",
         cv: "https://drive.google.com/file/d/1Y2UJLk_8FMRIypF-gtLFCDbVqXgA6pda/view?usp=sharing",
-        whatsapp: "+505 8888 8888"
+        whatsapp: "+505 8514 2553"
     },
     {
         name: "Sofia Barrios",
@@ -17,7 +17,7 @@ const team = [
         linkedin: "https://www.linkedin.com/in/sofia-barrios-570194342/",
         instagram: "https://www.instagram.com/sofia_barrios_18/",
         cv: "https://drive.google.com/file/d/example2/view",
-        whatsapp: "+505 8888 8889"
+        whatsapp: "+505 7879 6439"
     },
     {
         name: "Wilhelm Reyes",
@@ -35,7 +35,7 @@ const team = [
         linkedin: "https://www.linkedin.com/in/kenneth-teller-78686819a/",
         github: "https://github.com/KennethT2014",
         cv: "https://drive.google.com/file/d/example4/view",
-        whatsapp: "+505 8888 8891"
+        whatsapp: "+505 +505 8939 6446"
     },
     {
         name: "Anielka Lezama",
@@ -44,7 +44,7 @@ const team = [
         linkedin: "https://www.linkedin.com/in/anielka-lezama-948292349/",
         instagram: "https://www.instagram.com/anielka_leza17/",
         cv: "https://drive.google.com/file/d/example5/view",
-        whatsapp: "+505 8888 8892"
+        whatsapp: "+505 +505 8915 4247"
     },
     {
         name: "Agustin Amaya",
@@ -53,7 +53,7 @@ const team = [
         linkedin: "https://www.linkedin.com/in/agust%C3%ADn-amaya-b3b110244/",
         github: "https://github.com/bluehat8",
         cv: "https://drive.google.com/file/d/example6/view",
-        whatsapp: "+505 8888 8893"
+        whatsapp: "+505 +505 8228 2296"
     }
 ];
 
