@@ -12,7 +12,7 @@ const Contacto: React.FC = () => {
                 </h2>
 
                 {/* Contenedor principal */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
                     {/* Formulario */}
                     <motion.div
                         className="bg-green-900 text-white rounded-2xl p-6 md:p-8 shadow-lg"
@@ -27,49 +27,50 @@ const Contacto: React.FC = () => {
                                 <input
                                     type="text"
                                     placeholder="Nombre"
-                                    className="p-3 rounded-md bg-green-700 text-white placeholder-gray-200 outline-none"
+                                    className="p-3 rounded-md bg-white text-gray-700 placeholder-gray-500 outline-none border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200"
                                 />
                                 <input
                                     type="text"
                                     placeholder="Apellido"
-                                    className="p-3 rounded-md bg-green-700 text-white placeholder-gray-200 outline-none"
+                                    className="p-3 rounded-md bg-white text-gray-700 placeholder-gray-500 outline-none border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200"
                                 />
                             </div>
                             <input
                                 type="email"
                                 placeholder="Correo"
-                                className="w-full p-3 rounded-md bg-green-700 text-white placeholder-gray-200 outline-none"
+                                className="w-full p-3 rounded-md bg-white text-gray-700 placeholder-gray-500 outline-none border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200"
                             />
                             <input
                                 type="tel"
                                 placeholder="Celular"
-                                className="w-full p-3 rounded-md bg-green-700 text-white placeholder-gray-200 outline-none"
+                                className="w-full p-3 rounded-md bg-white text-gray-700 placeholder-gray-500 outline-none border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200"
                             />
                             <textarea
                                 placeholder="Mensaje"
-                                className="w-full p-3 rounded-md bg-green-700 text-white placeholder-gray-200 outline-none h-28 resize-none"
+                                className="w-full p-3 rounded-md bg-white text-gray-700 placeholder-gray-500 outline-none border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 h-28 resize-none"
                             ></textarea>
                             <button
                                 type="submit"
                                 className="w-full bg-white text-green-900 font-bold py-3 rounded-md hover:bg-gray-100 transition flex items-center justify-center gap-2"
                             >
                                 Enviar Mensaje
-                                <img
-                                    src="//public/icons/logoagromaps-01.svg"
+                                {/* <img
+                                    src="/icons/logoagromaps-01.svg"
                                     alt="Agromaps"
-                                    className="w-5 h-5"
-                                />
+                                    className="w-10 h-10"
+                                /> */}
                             </button>
                         </form>
                     </motion.div>
 
-                    {/* Video con borde verde */}
+                    {/* Video con borde verde - mismo tamaño que el formulario */}
                     <motion.div
                         className="rounded-2xl border-4 border-green-900 overflow-hidden shadow-lg"
                         initial={{ opacity: 0, x: 60 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
+                        style={{ height: 'fit-content' }}
                     >
                         <video
                             src="/videos/aggmmp.mp4" 
@@ -77,7 +78,8 @@ const Contacto: React.FC = () => {
                             autoPlay
                             loop
                             muted
-                            className="w-full h-full object-cover"
+                            className="w-full h-auto object-cover"
+                            style={{ minHeight: '480px' }}
                         />
                     </motion.div>
                 </div>
