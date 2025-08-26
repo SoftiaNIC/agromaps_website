@@ -84,7 +84,7 @@ const Card: React.FC<CardProps> = ({
 const Departamentos: React.FC = () => {
     return (
         <section
-            className="relative py-16 px-6 bg-cover bg-center"
+            id="Dep" className="relative py-16 px-6 bg-cover bg-center"
             style={{ backgroundImage: `url(${Depa_bg})` }}
         >
             {/* Overlay semitransparente para legibilidad */}

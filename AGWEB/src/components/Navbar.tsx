@@ -63,7 +63,9 @@ export default function Navbar() {
                         { name: "Nosotros", id: "aboutt" },
                         { name: "Agromaps", id: "agromapss" },
                         { name: "IA", id: "cultivo" },
+                        { name: "Departamento", id: "Dep" },
                         { name: "Equipo", id: "equipo" },
+                        
                     ].map((item, idx) => (
                         <button
                             key={idx}
@@ -84,9 +86,9 @@ export default function Navbar() {
 
                 {/* PC - Botón derecha */}
                 <div className="hidden md:flex">
-                    <Link
-                        to="/contacto"
-                        className="px-4 py-2 rounded-xl font-semibold text-white transition-colors"
+                    <button
+                        onClick={() => scrollToSection("contacto")}
+                        className="px-4 py-2 rounded-xl font-semibold text-white transition-colors cursor-pointer"
                         style={{ backgroundColor: buttonColor }}
                         onMouseEnter={(e) =>
                             ((e.target as HTMLElement).style.backgroundColor = buttonHover)
@@ -96,7 +98,7 @@ export default function Navbar() {
                         }
                     >
                         Contáctanos
-                    </Link>
+                    </button>
                 </div>
 
                 {/* Mobile - Menú hamburguesa */}
@@ -151,7 +153,7 @@ export default function Navbar() {
                     ))}
 
                     <Link
-                        to="/contacto"
+                        to="#contacto"
                         className="px-8 py-2 rounded-xl font-semibold text-white transition-colors"
                         style={{ backgroundColor: buttonColor }}
                         onMouseEnter={(e) =>

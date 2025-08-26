@@ -4,7 +4,7 @@ import React from "react";
 
 const Contacto: React.FC = () => {
     return (
-        <section className="py-16 px-6 bg-white" id="contacto">
+        <section  className="py-16 px-6 bg-white" id="contacto">
             <div className="max-w-7xl mx-auto">
                 {/* Título */}
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-green-900 mb-10 font-[Poppins]">
