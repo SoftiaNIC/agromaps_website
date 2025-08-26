@@ -95,8 +95,7 @@ const Departamentos: React.FC = () => {
                     Departamentos
                 </h2>
                 <p className="text-gray-700 mt-2 font-[Poppins]">
-                    En estos distintos lugares se muestran los diferentes y principales
-                    Cultivos.
+                    En estos departamentos presentados son los distintos lugares donde se cultiva y se trabaja la siembra y suelos.
                 </p>
 
                 {/* Cards */}
