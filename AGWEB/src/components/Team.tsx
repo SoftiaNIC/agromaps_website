@@ -44,7 +44,7 @@ const team =  [
         linkedin: "https://www.linkedin.com/in/anielka-lezama-948292349/",
         instagram: "https://www.instagram.com/anielka_leza17/",
         cv: "https://drive.google.com/file/d/example5/view",
-        whatsapp: "+505 +505 8915 4247"
+        whatsapp: "+505 8915 4247"
     },
     {
         name: "Agustin Amaya",
