@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Video from "../components/Video";
 import Depa from "../components/Depa";
 import Team from "../components/Team";
+import Contacto from "../components/Contacto";
 import Wedo from "../components/Wedo";
 
 
@@ -19,6 +20,7 @@ export default function Web1() {
             <Video />
             <Depa />
             <Team />
+            <Contacto />
             <Footer />
         </>
     );
