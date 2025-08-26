@@ -124,7 +124,7 @@ const Departamentos: React.FC = () => {
                         className="block"
                     >
                         <Card
-                            title="Cultivo granos básicos maíz, frijol y sorgo para autoconsumo."
+                            title="Cultivo granos básicos maíz, frijol y sorgo."
                             description=""
                             time="3 h 8 min (148.7 km)"
                             coords="13.09185, -86.35384"
@@ -156,7 +156,7 @@ const Departamentos: React.FC = () => {
                         className="block"
                     >
                         <Card
-                            title="Cultivo Principal Café, la chiltoma, el brócoli y el repollo."
+                            title="Cultivo Principal Café, la chiltoma y el repollo."
                             description=""
                             time="2 h 58 min (142.6 km)"
                             coords="13.09103, -86.00234"
