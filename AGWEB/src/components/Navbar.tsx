@@ -63,7 +63,7 @@ export default function Navbar() {
                         { name: "Nosotros", id: "aboutt" },
                         { name: "Agromaps", id: "agromapss" },
                         { name: "IA", id: "cultivo" },
-                        { name: "Departamento", id: "Dep" },
+                        { name: "Departamentos", id: "Dep" },
                         { name: "Equipo", id: "equipo" },
                         
                     ].map((item, idx) => (
