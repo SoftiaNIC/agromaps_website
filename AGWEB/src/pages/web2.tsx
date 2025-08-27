@@ -1,17 +1,13 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
+import Header from "../components/Header";
+import Home from "../components/Home";
 import Footer from "../components/Footer";
 
 
 export default function Web2() {
     return (
         <>
-            <Navbar />
-            <Hero />
-            <section className="px-6 py-12 text-center">
-                <h2 className="text-3xl font-bold mb-4">PROBANDO SI FUNCIONA WEB 2</h2>
-                <p>MAMAHUEVOOOOOOOOOOOOO</p>
-            </section>
+            <Header />
+            <Home />
             <Footer />
         </>
     );

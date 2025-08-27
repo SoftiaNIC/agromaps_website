@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 export default function About() {
@@ -29,12 +30,12 @@ export default function About() {
                     </p>
 
                     {/* BOTÓN */}
-                    <a
-                        href="#web2.tsx"
+                    <Link
+                        to="/web2"
                         className="inline-block bg-[#1C5937] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-colors duration-300 hover:bg-[#145BE5]"
                     >
                         CONOCER AGROMAPS
-                    </a>
+                    </Link>
                 </motion.div>
 
                 {/* MOCKUP MOBILE - Solo visible en móvil */}
