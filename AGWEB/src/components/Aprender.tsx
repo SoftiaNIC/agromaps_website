@@ -28,12 +28,13 @@ export default function Aprender() {
                     />
                 </motion.div>
 
-                                {/* Barra CTA con texto y botón en la misma línea */}
+                            
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
                     viewport={{ once: true }}
+                    className="flex justify-center lg:justify-end w-full max-w-7xl mx-auto px-4 lg:px-8"
                 >
                     <div className="bg-emerald-700 rounded-xl px-8 py-4 shadow-lg min-w-[500px] lg:min-w-[600px]">
                         <div className="flex justify-between items-center">
