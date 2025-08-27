@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
 
             {/* Imagen variante */}
             <img
-                src="/images/BGVar1.jpg" // 
+                src="/images/BGVar2.png" // 
                 alt="Agromaps Variante"
                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
                 style={
