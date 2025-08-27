@@ -51,8 +51,8 @@ export default function Header() {
                 {/* Navs en el centro */}
                 <div className="hidden md:flex items-center gap-8">
                     {[
-                        { name: "Inicio", id: "hero" },
-                        { name: "Aprender", id: "aprender" },
+                        { name: "Inicio", id: "heros" },
+                        { name: "Aprender", id: "apren" },
                         { name: "Proyectos", id: "proyectos" },
                         { name: "Agromaps", id: "agromaps" },
                         { name: "Beneficios", id: "beneficios" },

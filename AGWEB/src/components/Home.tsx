@@ -1,25 +1,29 @@
-// src/components/Hero.tsx
+// src/components/Home.tsx
 import React, { useState, useEffect } from "react";
 
-const Hero: React.FC = () => {
+const Home: React.FC = () => {
     const [pos, setPos] = useState({ x: 50, y: 50 });
     const [isMobile, setIsMobile] = useState(false);
-    const [showVariant, setShowVariant] = useState(true); // Cambiado a true para que sea visible
+    const [showVariant, setShowVariant] = useState(true);
 
-    // Detectar si es móvil
+    // Detectar si es móvil con breakpoints más precisos
     useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        const checkMobile = () => {
+            const width = window.innerWidth;
+            setIsMobile(width < 768);
+        };
+        
         checkMobile();
         window.addEventListener("resize", checkMobile);
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
-    // Alternar imágenes cada 5s en móvil
+    // Alternar imágenes cada 4s en móvil para mejor experiencia
     useEffect(() => {
         if (isMobile) {
             const interval = setInterval(() => {
                 setShowVariant((prev) => !prev);
-            }, 5000);
+            }, 4000);
             return () => clearInterval(interval);
         }
     }, [isMobile]);
@@ -35,53 +39,76 @@ const Hero: React.FC = () => {
 
     const handleMouseLeave = () => {
         if (!isMobile) {
-            setShowVariant(false); // Ocultar la variante cuando el mouse sale
+            setShowVariant(false);
         }
     };
 
     const handleMouseEnter = () => {
         if (!isMobile) {
-            setShowVariant(true); // Mostrar la variante cuando el mouse entra
+            setShowVariant(true);
         }
     };
 
     return (
         <section
+            id="heros"
             className="relative w-full h-screen overflow-hidden"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            {/* Imagen base */}
-            <img
-                src="/images/BGbase.jpg" // 
-                alt="Agromaps Base"
-                className="absolute inset-0 w-full h-full object-cover"
-            />
+            {/* Fondo mobile: imagen bg_imgmob */}
+            {isMobile && (
+                <div className="absolute inset-0 z-10">
+                    <img
+                        src="/images/bg_imgmob.png"
+                        alt="Background Mobile"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+            )}
 
-            {/* Imagen variante */}
-            <img
-                src="/images/BGVar2.png" // 
-                alt="Agromaps Variante"
-                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-                style={
-                    isMobile
-                        ? {
-                            opacity: showVariant ? 1 : 0, // alterna en móvil
-                        }
-                        : {
-                            opacity: showVariant ? 1 : 0, // mostrar/ocultar en desktop
-                            WebkitMaskImage: showVariant ? `radial-gradient(circle at ${pos.x}% ${pos.y}%, rgba(0,0,0,1) 100px, rgba(0,0,0,0) 200px)` : 'none',
-                            WebkitMaskRepeat: "no-repeat",
-                            WebkitMaskSize: "cover",
-                            maskImage: showVariant ? `radial-gradient(circle at ${pos.x}% ${pos.y}%, rgba(0,0,0,1) 100px, rgba(0,0,0,0) 300px)` : 'none',
-                            maskRepeat: "no-repeat",
-                            maskSize: "cover",
-                        }
-                }
-            />
+            {/* Imagen base - solo visible en desktop */}
+            {!isMobile && (
+                <img
+                    src="/images/BGbase.jpg"
+                    alt="Agromaps Base"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+            )}
+
+            {/* Imagen variante - solo visible en desktop */}
+            {!isMobile && (
+                <img
+                    src="/images/BGVar2.png"
+                    alt="Agromaps Variante"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+                    style={{
+                        opacity: showVariant ? 1 : 0,
+                        WebkitMaskImage: showVariant ? `radial-gradient(circle at ${pos.x}% ${pos.y}%, rgba(0,0,0,1) 100px, rgba(0,0,0,0) 200px)` : 'none',
+                        WebkitMaskRepeat: "no-repeat",
+                        WebkitMaskSize: "cover",
+                        maskImage: showVariant ? `radial-gradient(circle at ${pos.x}% ${pos.y}%, rgba(0,0,0,1) 100px, rgba(0,0,0,0) 300px)` : 'none',
+                        maskRepeat: "no-repeat",
+                        maskSize: "cover",
+                    }}
+                />
+            )}
+
+            {/* Overlay para mejorar legibilidad en mobile */}
+            {isMobile && (
+                <div className="absolute inset-0 bg-black/20 pointer-events-none z-20"></div>
+            )}
+
+            {/* Indicador de cambio de imagen para mobile */}
+            {isMobile && (
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+                    <div className={`w-2 h-2 rounded-full transition-colors duration-300 ${showVariant ? 'bg-emerald-600' : 'bg-emerald-300'}`}></div>
+                    <div className={`w-2 h-2 rounded-full transition-colors duration-300 ${!showVariant ? 'bg-emerald-600' : 'bg-emerald-300'}`}></div>
+                </div>
+            )}
         </section>
     );
 };
 
-export default Hero;
+export default Home;

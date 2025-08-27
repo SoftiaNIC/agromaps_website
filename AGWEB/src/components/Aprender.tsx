@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Aprender() {
     return (
-        <section className="relative w-full h-[500px] md:h-[600px] lg:h-[740px] overflow-hidden">
+        <section id="apren" className="relative w-full h-[500px] md:h-[600px] lg:h-[740px] overflow-hidden">
             {/* Background Image */}
             <img
                 src="/images/Bg_aprender.png"
@@ -28,13 +28,13 @@ export default function Aprender() {
                     />
                 </motion.div>
 
-                            
+                {/* Barra CTA Desktop - solo visible en desktop */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="flex justify-center lg:justify-end w-full max-w-7xl mx-auto px-4 lg:px-8"
+                    className="hidden lg:flex justify-center lg:justify-end w-full max-w-7xl mx-auto px-4 lg:px-8"
                 >
                     <div className="bg-emerald-700 rounded-xl px-8 py-4 shadow-lg min-w-[500px] lg:min-w-[600px]">
                         <div className="flex justify-between items-center">
@@ -52,6 +52,22 @@ export default function Aprender() {
                             </a>
                         </div>
                     </div>
+                </motion.div>
+
+                {/* Botón CTA Mobile - solo visible en mobile */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="lg:hidden flex justify-center w-full px-4"
+                >
+                    <a
+                        href="#aprender"
+                        className="inline-block bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-300 w-full max-w-sm text-center"
+                    >
+                        Aprender
+                    </a>
                 </motion.div>
             </div>
         </section>
