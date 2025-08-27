@@ -54,11 +54,6 @@ const Contacto: React.FC = () => {
                                 className="w-full bg-white text-green-900 font-bold py-3 rounded-md hover:bg-gray-100 transition flex items-center justify-center gap-2"
                             >
                                 Enviar Mensaje
-                                {/* <img
-                                    src="/icons/logoagromaps-01.svg"
-                                    alt="Agromaps"
-                                    className="w-10 h-10"
-                                /> */}
                             </button>
                         </form>
                     </motion.div>
