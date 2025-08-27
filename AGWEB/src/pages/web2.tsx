@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Home from "../components/Home";
+import Aprender from "../components/Aprender";
 import Footer from "../components/Footer";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 
@@ -12,6 +13,7 @@ export default function Web2() {
         <>
             <Header />
             <Home />
+            <Aprender />
             <Footer />
         </>
     );
