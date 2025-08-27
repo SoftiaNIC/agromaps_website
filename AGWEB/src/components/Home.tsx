@@ -54,14 +54,14 @@ const Hero: React.FC = () => {
         >
             {/* Imagen base */}
             <img
-                src="/images/BGbase.jpg" // ⚡ tu imagen base
+                src="/images/BGbase.jpg" // 
                 alt="Agromaps Base"
                 className="absolute inset-0 w-full h-full object-cover"
             />
 
             {/* Imagen variante */}
             <img
-                src="/images/BGVar1.jpg" // ⚡ tu imagen variante
+                src="/images/BGVar1.jpg" // 
                 alt="Agromaps Variante"
                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
                 style={
