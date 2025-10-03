@@ -86,28 +86,28 @@ export default function Hero() {
     // Configuración de imágenes (default + hover)
     const leftImages = [
         {
-            defaultSrc: "/src/assets/images/Hero/Property1=Default.png",
-            hoverSrc: "/src/assets/images/Hero/Property1=Variant2.png",
+            defaultSrc: "/images/Hero/Property1=Default.png",
+            hoverSrc: "/images/Hero/Property1=Variant2.png",
         },
         {
-            defaultSrc: "/src/assets/images/Hero/Property2=Default.png",
-            hoverSrc: "/src/assets/images/Hero/Property2=Variant2.png",
+            defaultSrc: "/images/Hero/Property2=Default.png",
+            hoverSrc: "/images/Hero/Property2=Variant2.png",
         },
     ];
 
     const centerImage = {
-        defaultSrc: "/src/assets/images/Hero/Property3=Default.png",
-        hoverSrc: "/src/assets/images/Hero/Property3=Variant2.png",
+        defaultSrc: "/images/Hero/Property3=Default.png",
+        hoverSrc: "/images/Hero/Property3=Variant2.png",
     };
 
     const rightImages = [
         {
-            defaultSrc: "/src/assets/images/Hero/Property4=Default.png",
-            hoverSrc: "/src/assets/images/Hero/Property4=Variant2.png",
+            defaultSrc: "/images/Hero/Property4=Default.png",
+            hoverSrc: "/images/Hero/Property4=Variant2.png",
         },
         {
-            defaultSrc: "/src/assets/images/Hero/Property5=Default.png",
-            hoverSrc: "/src/assets/images/Hero/Property5=Variant2.png",
+            defaultSrc: "/images/Hero/Property5=Default.png",
+            hoverSrc: "/images/Hero/Property5=Variant2.png",
         },
     ];
 

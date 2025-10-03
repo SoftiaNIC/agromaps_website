@@ -17,7 +17,7 @@ export default function Footer({ siteName = "Agromaps", logo }: FooterProps) {
                             <div className="mb-4">{logo}</div>
                         ) : (
                             <img
-                                src="/public/icons/lgo_footer.svg" 
+                                src="/icons/lgo_footer.svg" 
                                 alt="Agromaps Logo"
                                 className="w-48 mb-4"
                             />
@@ -37,12 +37,12 @@ export default function Footer({ siteName = "Agromaps", logo }: FooterProps) {
                                 <li className="mb-2"><a href="/careers" className="hover:text-white">Plataformas</a></li>
                                 <div className="flex space-x-3">
                                     <img
-                                        src="/src/assets/images/Footer/logo_playstore.png" 
+                                        src="/images/Footer/logo_playstore.png" 
                                         alt="Google Play"
                                         className="h-10"
                                     />
                                     <img
-                                        src="/src/assets/images/Footer/logo_appstore.png" 
+                                        src="/images/Footer/logo_appstore.png" 
                                         alt="App Store"
                                         className="h-10"
                                     />

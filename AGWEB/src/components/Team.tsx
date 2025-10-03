@@ -4,7 +4,7 @@ const team =  [
     {
         name: "Geovanny Sandino",
         role: "Ingeniero de Sistemas",
-        img: "/src/assets/images/Team/gio.svg",
+        img: "/images/Team/gio.svg",
         linkedin: "https://www.linkedin.com/in/geovanny-daniel-sandino-137691273/",
         github: "https://github.com/GioX-16",
         cv: "https://drive.google.com/file/d/1Y2UJLk_8FMRIypF-gtLFCDbVqXgA6pda/view?usp=sharing",
@@ -13,7 +13,7 @@ const team =  [
     {
         name: "Sofia Barrios",
         role: "Diseñadora",
-        img: "/src/assets/images/Team/sof.svg",
+        img: "/images/Team/sof.svg",
         linkedin: "https://www.linkedin.com/in/sofia-barrios-570194342/",
         instagram: "https://www.instagram.com/sofia_barrios_18/",
         cv: "https://drive.google.com/file/d/example2/view",
@@ -22,7 +22,7 @@ const team =  [
     {
         name: "Wilhelm Reyes",
         role: "Ingeniero de Sistemas",
-        img: "/src/assets/images/Team/wil.svg",
+        img: "/images/Team/wil.svg",
         linkedin: "https://www.linkedin.com/in/wilhelm-antonio-reyes-romero-b28993149/",
         github: "https://github.com/WilhelmPro007",
         cv: "https://drive.google.com/file/d/example3/view",
@@ -31,7 +31,7 @@ const team =  [
     {
         name: "Kenneth Teller",
         role: "Ingeniero de Sistemas",
-        img: "/src/assets/images/Team/ken.svg",
+        img: "/images/Team/ken.svg",
         linkedin: "https://www.linkedin.com/in/kenneth-teller-78686819a/",
         github: "https://github.com/KennethT2014",
         cv: "https://drive.google.com/file/d/example4/view",
@@ -40,21 +40,22 @@ const team =  [
     {
         name: "Anielka Lezama",
         role: "Ingeniería Agrícola",
-        img: "/src/assets/images/Team/ani.svg",
+        img: "/images/Team/ani.svg",
         linkedin: "https://www.linkedin.com/in/anielka-lezama-948292349/",
         instagram: "https://www.instagram.com/anielka_leza17/",
         cv: "https://drive.google.com/file/d/example5/view",
         whatsapp: "+505 8915 4247"
-    },
-    {
-        name: "Agustin Amaya",
-        role: "Ingeniero de Sistemas",
-        img: "/src/assets/images/Team/Agu.svg",
-        linkedin: "https://www.linkedin.com/in/agust%C3%ADn-amaya-b3b110244/",
-        github: "https://github.com/bluehat8",
-        cv: "https://drive.google.com/file/d/example6/view",
-        whatsapp: "+505 +505 8228 2296"
     }
+    // ,
+    // {
+    //     name: "Agustin Amaya",
+    //     role: "Ingeniero de Sistemas",
+    //     img: "/images/Team/Agu.svg",
+    //     linkedin: "https://www.linkedin.com/in/agust%C3%ADn-amaya-b3b110244/",
+    //     github: "https://github.com/bluehat8",
+    //     cv: "https://drive.google.com/file/d/example6/view",
+    //     whatsapp: "+505 +505 8228 2296"
+    // }
 ];
 
 export default function Equipo() {
@@ -64,7 +65,7 @@ export default function Equipo() {
             <div 
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{
-                    backgroundImage: `url('/src/assets/images/Team/bg_team.png')`
+                    backgroundImage: `url('/images/Team/bg_team.png')`
                 }}
             />
             

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mockupImage from "..//assets/Mckoup.svg";
+import mockupImage from "/images/Mckoup.svg";
 
 export default function WhatWeDo() {
     return (

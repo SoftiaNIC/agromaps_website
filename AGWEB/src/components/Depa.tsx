@@ -1,15 +1,15 @@
 // src/components/Departamentos.tsx
 import { motion } from "framer-motion";
 import React from "react";
-import Depa_bg from "..//assets/images/Depa/Depa_bg.png";
-import MatagalpSvg from "..//assets/images/Depa/Matagalp.svg";
-import EstelSvg from "..//assets/images/Depa/Estel.svg";
-import ChinandSvg from "..//assets/images/Depa/Chinand.svg";
-import JinoteSvg from "..//assets/images/Depa/Jinote.svg";
-import UbijinotSvg from "..//assets/images/Depa/ubijinot.svg";
-import UbimatSvg from "..//assets/images/Depa/ubimat.svg";
-import UbiesteSvg from "..//assets/images/Depa/ubieste.svg";
-import UbichiinSvg from "..//assets/images/Depa/ubichiin.svg";
+const Depa_bg = "/images/Depa/Depa_bg.png";
+const MatagalpSvg = "/images/Depa/Matagalp.svg";
+const EstelSvg = "/images/Depa/Estel.svg";
+const ChinandSvg = "/images/Depa/Chinand.svg";
+const JinoteSvg = "/images/Depa/Jinote.svg";
+const UbijinotSvg = "/images/Depa/ubijinot.svg";
+const UbimatSvg = "/images/Depa/ubimat.svg";
+const UbiesteSvg = "/images/Depa/ubieste.svg";
+const UbichiinSvg = "/images/Depa/ubichiin.svg";
 
 interface CardProps {
     title: string;

@@ -47,7 +47,7 @@ export default function About() {
                     className="flex justify-center relative w-full md:hidden"
                 >
                     <img
-                        src="/src/assets/images/About/app_start.png"
+                        src="/images/About/app_start.png"
                         alt="App Agromaps Mobile"
                         className="w-32 h-auto sm:w-40 drop-shadow-2xl transition-all duration-300 hover:scale-105"
                     />
@@ -62,7 +62,7 @@ export default function About() {
                     className="hidden md:flex justify-end relative w-full"
                 >
                     <img
-                        src="/src/assets/images/About/app_start.png"
+                        src="/images/About/app_start.png"
                         alt="App Agromaps Desktop"
                         className="w-40 h-auto lg:w-48 xl:w-56 2xl:w-64 drop-shadow-2xl transition-all duration-300 hover:scale-105"
                     />
