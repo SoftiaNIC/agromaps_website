@@ -41,7 +41,7 @@ export default function Header() {
                 <div className="flex items-center gap-2">
                     <Link to="/" className="flex items-center gap-2">
                         <img
-                            src="/public/icons/Logo_nv.svg"
+                            src="/icons/Logo_nv.svg"
                             alt="Agromaps Logo"
                             className="h-10 w-auto"
                         />
