@@ -12,13 +12,17 @@ export default defineConfig({
     sourcemap: true
   },
   server: {
-    port: 3000,
+    port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
     strictPort: true,
-    host: true
+    host: '0.0.0.0',
+    hmr: {
+      port: 3001,
+      clientPort: 3001
+    }
   },
   preview: {
-    port: 3000,
+    port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
     strictPort: true,
-    host: true
+    host: '0.0.0.0'
   }
 })
