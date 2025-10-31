@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mockupImage from "/images/Mckoup.svg";
+// Image is in public/images, so we can reference it directly
 
 export default function WhatWeDo() {
     return (
@@ -45,7 +45,7 @@ export default function WhatWeDo() {
                     transition={{ type: "spring", stiffness: 200 }}
                 >
                     <img
-                        src={mockupImage}
+                        src="/images/Mckoup.svg"
                         alt="Agromaps Mockup"
                         className="mx-auto max-w-full drop-shadow-2xl"
                     />
